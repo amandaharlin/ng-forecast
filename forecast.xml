@@ -1,0 +1,21 @@
+<forecast>
+  <forecast_info>
+    <location lat="35.1995" lon="-97.4843" timezone="CST" region="OK" country="United States of America" zipcode="73072" offset="-6">Norman</location>
+    <units>us</units>
+  </forecast_info>
+  <daily_summary>
+    <summary_date>1/25/2015</summary_date>
+    <day_of_week>Sunday</day_of_week>
+    <high>59</high>
+    <low>38</low>
+    <wnd_spd>15</wnd_spd>
+    <wnd_dir>NNW</wnd_dir>
+    <pop>0</pop>
+    <wx>Mostly clear</wx>
+    <wx_code>101</wx_code>
+    <wx_icon_text>day/mostlyclear</wx_icon_text>
+    <wx_icon>http://content.wdtinc.com/images/wxicons/day/mostlyclear.jpg</wx_icon>
+    <sunrise>07:32 am</sunrise>
+    <sunset>05:51 pm</sunset>
+  </daily_summary>
+</forecast>

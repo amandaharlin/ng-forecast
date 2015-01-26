@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'd:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'd:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'uninstall',
+1 verbose cli   '-g',
+1 verbose cli   'nodemon' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose node_modules\nodemon unbuild
+5 info preuninstall nodemon@1.3.2
+6 info uninstall nodemon@1.3.2
+7 verbose true,C:\Users\Amanda Harlin\AppData\Roaming\npm\node_modules,C:\Users\Amanda Harlin\AppData\Roaming\npm\node_modules unbuild nodemon@1.3.2
+8 verbose C:\Users\Amanda Harlin\AppData\Roaming\npm,[object Object] binRoot
+9 error Error: EPERM, unlink 'C:\Users\Amanda Harlin\AppData\Roaming\npm\nodemon'
+9 error  { [Error: EPERM, unlink 'C:\Users\Amanda Harlin\AppData\Roaming\npm\nodemon']
+9 error   errno: 50,
+9 error   code: 'EPERM',
+9 error   path: 'C:\\Users\\Amanda Harlin\\AppData\\Roaming\\npm\\nodemon' }
+10 error Please try running this command again as root/Administrator.
+11 error System Windows_NT 6.1.7601
+12 error command "d:\\Program Files\\nodejs\\node.exe" "d:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "uninstall" "-g" "nodemon"
+13 error cwd D:\Users\Amanda Harlin\Desktop\ng-forecast
+14 error node -v v0.10.35
+15 error npm -v 1.4.28
+16 error path C:\Users\Amanda Harlin\AppData\Roaming\npm\nodemon
+17 error code EPERM
+18 error errno 50
+19 error stack Error: EPERM, unlink 'C:\Users\Amanda Harlin\AppData\Roaming\npm\nodemon'
+20 verbose exit [ 50, true ]

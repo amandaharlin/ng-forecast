@@ -1,0 +1,12 @@
+<div>
+  <p>This is the location view.</p>
+
+  <form>
+    <div class="form-group">
+      <label for="searchZipCodeOrCityState">Search by Zip Code or City, State</label>
+      <input type="text" class="form-control" id="searchZipCodeOrCityState" placeholder="73072 or Norman, OK" ng-model="location">
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="navigate()">Submit</button>
+  </form>
+  <div ui-view></div>
+</div>
