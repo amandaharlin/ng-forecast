@@ -5,7 +5,7 @@ var express = require('express'),
   path = require('path'),
   _ = require('lodash'),
   rp = require('request-promise'),
-  qs = require('qs'),
+  qs = require('query-string'),
   fs = require('fs'),
   xml2js = require('xml2js');
 
@@ -22,7 +22,7 @@ function getForecast(req, res) {
     datatype = qParams.datatype || 'json',
     location = qParams.location;
 
-  console.log('qParams ', qParams);
+  console.log('qParams ', location);
 
   function sendData(xmlData) {
     var xmlRequested = datatype.toLowerCase() === 'xml';
@@ -39,19 +39,20 @@ function getForecast(req, res) {
     parser.parseString(xmlData, returnJSON);
   }
 
-  var searchParameters;
-  var searchTerms;
+  var splitLocation = location.split(',');
+  var params="";
+  if(splitLocation.length === 2) {
+    //city=index 0 & state=index1
+    params="CITY=" + splitLocation[0].trim() + "&STATE=" + splitLocation[1].trim();
+  } else {
+    //assuming that otherwise it's a 5 int zip code
+    //zip=index0
+    params="ZIP=" + splitLocation[0].trim();
+  }
 
-  //is zipcode 
-  var regexpZipCode = new RegExp("^\\d{5}(-\\d{4}?$)");
-  // var regexpCityState = new RegExp("/^[A-Za-z]+&?[A-Za-z]+{2,}$/;");
+  console.log('split da location: ', splitLocation);
 
-  //is city
-
-
-  //querystring.stringify
-
-  var apiUrl = 'http://weather.wdtinc.com/feeds/imapweather/worldForecast2Xml.php?';
+  var apiUrl = 'http://weather.wdtinc.com/feeds/imapweather/worldForecast2Xml.php?' + params;
 
   rp(apiUrl) //?ZIP=73072 ?CITY=Norman&STATE=OK
     .then(sendData)

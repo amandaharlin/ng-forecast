@@ -4,7 +4,7 @@ ForecastApp
   .config(function dailyWeather($stateProvider) {
 
     function resolveForecast(Restangular, $stateParams) {
-      
+
       var forecast = Restangular.one('forecast').get({
         location: $stateParams.location
       });
