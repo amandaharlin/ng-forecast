@@ -5,7 +5,10 @@ ForecastApp
 
     function resolveForecast(Restangular, $stateParams) {
       
-      var forecast = Restangular.one('forecast').get({location: $stateParams.location});
+      var forecast = Restangular.one('forecast').get({
+        location: $stateParams.location
+      });
+
       return forecast;
     }
 
