@@ -3,15 +3,19 @@
 ForecastApp
   .config(function dailyWeather($stateProvider) {
 
-    function forecastResolve(forecast) {
-        var listofForecast = Restangular.get('forecasts');
+    function resolveForecast(Restangular, $stateParams) {
+      
+      var forecast = Restangular.one('forecast').get({location: $stateParams.location});
+      return forecast;
     }
 
     var forecastView = {
       url: '/forecast?location',
       templateUrl: './views/forecast.html',
       controller: 'forecastViewCtrl',
-      resolve: forecastResolve
+      resolve: {
+        forecast: resolveForecast
+      }
     };
 
     $stateProvider
@@ -20,5 +24,8 @@ ForecastApp
 
 ForecastApp
   .controller('forecastViewCtrl', function forecastViewCtrl($scope, forecast) {
-    $scope.forecast = forecast;
+    var forecast = forecast.forecast || {};
+    $scope.forecastInfo = forecast.forecast_info[0];
+    $scope.dailySummary = forecast.daily_summary[0];
+
   });
