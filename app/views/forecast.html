@@ -1,22 +1,34 @@
 <div>
-  <!--
-  <div class="jumbotron">
-    "Date": {{forecast.summary_date}} | "Location": {{forecast._}}
-    <br /> "Day of Week" : {{forecast.day_of_week}}
-    <br /> "High Temperature": {{forecast.high}}
-    <br /> "Low Temperature": {{forecast.low}}
-    <br /> "Wind Speed": {{forecast.wnd_spd}}
-    <br /> "Wind Direction" : {{dailySummary.wnd_dir[0]}}
-    <br /> "Percentage of Precipitation (POP)" : {{forecast.pop}}
-    <br /> "Image of the wx code": {{forecast.wx}}
-    <br /> "wx code": {{forecast.wx_code}}
-  </div>
--->
-
+<!--
   <div class="jumbotron">
 
     {{forecastInfo}}
-
+<hr/>
     {{dailySummary}}
   </div>
+-->
+
+
+
+  <div class="jumbotron">
+  <br/>  <span>"Date": {{forecastInfo.summary_date[0]}}</span> 
+  <br/>  <span>"Location": {{forecastInfo._[0]}}</span>
+  <br/>  <span>"Day of Week" : {{forecastInfo.day_of_week[0]}}</span>
+  <br/>  <span>"High Temperature": {{forecastInfo.high[0]}}</span>
+  <br/>  <span>"Low Temperature": {{forecastInfo.low[0]}}</span>
+  <br/>  <span>"Wind Speed": {{forecastInfo.wnd_spd[0]}}</span>
+  <br/>  
+  <br/>  <hr/>
+  <br/>  
+  <br/>  <span>"Wind Direction" : {{dailySummary.wnd_dir[0]}}</span>
+  <br/>  <span>"Percentage of Precipitation (POP)" : {{dailySummary.pop[0]}}</span>
+  <br/>  <span>icon <img ng-src="{{wxIcon}}"> summary {{dailySummary.wx[0]}}</span>
+  <br/>  <span>"wx code": {{dailySummary.wx_code[0]}}</span>
+    
+    
+    
+    {{wxIcon}}
+  </div>
+
+
 </div>

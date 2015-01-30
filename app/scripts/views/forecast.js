@@ -31,4 +31,7 @@ ForecastApp
     $scope.forecastInfo = forecast.forecast_info[0];
     $scope.dailySummary = forecast.daily_summary[0];
 
+
+  $scope.wxIcon = forecast.daily_summary[0].wx_icon[0];
+
   });
