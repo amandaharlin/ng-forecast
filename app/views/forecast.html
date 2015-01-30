@@ -1,22 +1,20 @@
 <div>
-  <!--
+  
   <div class="jumbotron">
-    "Date": {{forecast.summary_date}} | "Location": {{forecast._}}
-    <br /> "Day of Week" : {{forecast.day_of_week}}
-    <br /> "High Temperature": {{forecast.high}}
-    <br /> "Low Temperature": {{forecast.low}}
-    <br /> "Wind Speed": {{forecast.wnd_spd}}
-    <br /> "Wind Direction" : {{dailySummary.wnd_dir[0]}}
-    <br /> "Percentage of Precipitation (POP)" : {{forecast.pop}}
-    <br /> "Image of the wx code": {{forecast.wx}}
-    <br /> "wx code": {{forecast.wx_code}}
+    <span>"Date": {{summaryDate}} | </span>
+    <span>"Location": {{forecast._}} </span>
+    <span>"Day of Week" : {{weekDay}} </span>
+    <span>"High Temperature": {{high}} </span>
+    <span>"Low Temperature": {{low}} </span>
+    <span>"Wind Speed": {{wnd_spd}} </span>
+    <span>"Wind Direction" : {{wnd_dir}} </span>
+    <span>"Percentage of Precipitation (POP)" : {{pop}} </span>
+    <span>"Image of the wx code": {{wx_icon_text}} amanda <img ng-src="http://content.wdtinc.com/images/wxicons2/150x100/{{wx_icon_text}}.jpg"> </span>
+    <span>"wx code": {{wx_code}} </span>
+  
+    <span class="temp">{{high}}</span>
+    <span class="icon icon-large" data-icon="{{weather_code}}"></span>
   </div>
--->
 
-  <div class="jumbotron">
-
-    {{forecastInfo}}
-
-    {{dailySummary}}
   </div>
 </div>

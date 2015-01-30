@@ -221,18 +221,24 @@ module.exports = function (grunt) {
     //     }
     //   }
     // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
+    uglify: {
+      options: {
+      banner: '// amanda<%= grunt.template.today("dd-mm-yyyy") %> \n\n\n '
+     },
+      dist: {
+        files: {
+          // '<%= yeoman.dist %>/scripts/scripts.js': [
+          //   '<%= yeoman.dist %>/scripts/scripts.js'
+
+          'README.md' : [
+              'README.md'
+          ]
+        }
+      }
+    },
+    concat: {
+      dist: {}
+    },
 
     imagemin: {
       dist: {
@@ -352,8 +358,19 @@ module.exports = function (grunt) {
         singleRun: true
       }
     }
+
   });
 
+
+  // grunt.registerTask('wdt', 'compile web & node apps 4 wdt', function (target) {
+  //   if (target === 'README.md') {
+  //     return grunt.task.run(['jshint', 'qunit', 'concat', 'uglify']);
+
+  //     grunt.log.ok('thanks for running ' + this.name);
+  //   }
+  // });
+
+grunt.registerTask('wdt', ['uglify']);
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
