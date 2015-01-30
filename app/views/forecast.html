@@ -1,22 +1,16 @@
 <div>
-<!--
-  <div class="jumbotron">
-
-    {{forecastInfo}}
-<hr/>
-    {{dailySummary}}
-  </div>
--->
 
 
 
   <div class="jumbotron">
-  <br/>  <span>"Date": {{forecastInfo.summary_date[0]}}</span> 
-  <br/>  <span>"Location": {{forecastInfo._[0]}}</span>
-  <br/>  <span>"Day of Week" : {{forecastInfo.day_of_week[0]}}</span>
-  <br/>  <span>"High Temperature": {{forecastInfo.high[0]}}</span>
-  <br/>  <span>"Low Temperature": {{forecastInfo.low[0]}}</span>
-  <br/>  <span>"Wind Speed": {{forecastInfo.wnd_spd[0]}}</span>
+  <br/>  <span>"Date": {{dailySummary.summary_date[0]}}</span> 
+    
+  <br/>  <span>"Location": {{forcastInfo[0].location[0]._}}</span>
+    
+  <br/>  <span>"Day of Week" : {{dailySummary.day_of_week[0]}}</span>
+  <br/>  <span>"High Temperature": {{dailySummary.high[0]}}</span>
+  <br/>  <span>"Low Temperature": {{dailySummary.low[0]}}</span>
+  <br/>  <span>"Wind Speed": {{dailySummary.wnd_spd[0]}}</span>
   <br/>  
   <br/>  <hr/>
   <br/>  
@@ -25,10 +19,11 @@
   <br/>  <span>icon <img ng-src="{{wxIcon}}"> summary {{dailySummary.wx[0]}}</span>
   <br/>  <span>"wx code": {{dailySummary.wx_code[0]}}</span>
     
+    <br/>
     
-    
-    {{wxIcon}}
+<!--    {{wxIcon}}-->
   </div>
-
+  
+    forecast:  {{forcast}}
 
 </div>

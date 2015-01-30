@@ -27,11 +27,13 @@ ForecastApp
 
 ForecastApp
   .controller('forecastViewCtrl', function forecastViewCtrl($scope, forecast) {
-    var forecast = forecast.forecast || {};
-    $scope.forecastInfo = forecast.forecast_info[0];
-    $scope.dailySummary = forecast.daily_summary[0];
+    var wx = forecast.forecast || {};
+    $scope.forecast = wx;
+    $scope.forecastInfo = wx['forecast_info'][0];
+    $scope.dailySummary = wx.daily_summary[0];
 
 
-  $scope.wxIcon = forecast.daily_summary[0].wx_icon[0];
+    $scope.wxIcon = wx.daily_summary[0].wx_icon[0];
 
+    console.log(forecast);
   });
