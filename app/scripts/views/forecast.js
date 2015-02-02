@@ -31,25 +31,26 @@ ForecastApp
   
     function toDay(day, index){
       return {
+        index: index || 0,
         date: day.summary_date[0],
-        weekDay: day.day_of_week[0],
+        weekDay: day.day_of_week[0].slice(0,3),
         highTemp: day.high[0],
         lowTemp: day.low[0],
         windSpeed: day.wnd_spd[0],
         windDirection: day.wnd_dir[0],
         precipPercent: day.pop[0],
-        icon: day.wx_icon[0]
+        icon: day.wx_icon[0].replace('wxicons', 'wxicons2/150x100')
       };
     }
   
-    var numberOfDaysInWeekForecast = 6;
+    var numberOfDaysInWeekForecast = 7;
   
     if((wx.daily_summary.length -1) < numberOfDaysInWeekForecast){
       numberOfDaysInWeekForecast = (wx.daily_summary.length - 1);
     }
   
-    var currentDay = toDay(wx.daily_summary[0]);
-    var week = wx.daily_summary.slice(1, numberOfDaysInWeekForecast + 1);
+    var currentDay = toDay(wx.daily_summary[$scope.selectedIndex || 0]);
+    var week = wx.daily_summary.slice(0, numberOfDaysInWeekForecast + 1);
   
 
     var days = _.map(week, toDay);

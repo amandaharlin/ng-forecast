@@ -17,29 +17,55 @@ body {
   float: left;
 }
 
+.forecast-zone-label {
+  height: 34ps;
+  line-height: 34px;
+  font-weight: normal;
+  font-size: 18px;
+}
+
 .forecast-current {
-  background-color: grey;
   height: 150px
 }
 
-.forecast-current-title {}
+.forecast-current-title {
+  text-align: center;
+}
 
 .forecast-current-hightemp {}
 
 .forecast-current-lowtemp {}
 
-.forecast-daily {
-  background-color: orange;
-  
+.forecast-current-icon {
+  width: 100%;
 }
 
-.forecast-daily-title {}
+.forecast-daily {}
 
-.forecast-daily-hightemp {}
-
-.forecast-daily-lowtemp {}
+.forecast-daily .forecast-day:first-child {
+  border-left: none;
+}
 
 .forecast-day {
-  background-color: lime;
-  height:150px
+  border-left: 1px solid #ccc;
+}
+
+.forecast-day-title {
+  text-align: center;
+}
+
+.forecast-day-icon {
+  width: 100%;
+}
+
+.forecast-day-temp {
+  text-align: center;
+}
+
+.forecast-day-temp-hightemp {}
+
+.forecast-day-temp-lowtemp {}
+
+.forecast-day {
+  height: 150px
 }
