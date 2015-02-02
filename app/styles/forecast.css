@@ -1,0 +1,71 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.temp {
+  font-weight: 100;
+  font-size: 10em;
+}
+
+.forecast {
+  height: 100px;
+}
+
+.forecast-zone {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+.forecast-zone-label {
+  height: 34ps;
+  line-height: 34px;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.forecast-current {
+  height: 150px
+}
+
+.forecast-current-title {
+  text-align: center;
+}
+
+.forecast-current-hightemp {}
+
+.forecast-current-lowtemp {}
+
+.forecast-current-icon {
+  width: 100%;
+}
+
+.forecast-daily {}
+
+.forecast-daily .forecast-day:first-child {
+  border-left: none;
+}
+
+.forecast-day {
+  border-left: 1px solid #ccc;
+}
+
+.forecast-day-title {
+  text-align: center;
+}
+
+.forecast-day-icon {
+  width: 100%;
+}
+
+.forecast-day-temp {
+  text-align: center;
+}
+
+.forecast-day-temp-hightemp {}
+
+.forecast-day-temp-lowtemp {}
+
+.forecast-day {
+  height: 150px
+}

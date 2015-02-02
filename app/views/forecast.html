@@ -1,22 +1,13 @@
-<div>
-  <!--
-  <div class="jumbotron">
-    "Date": {{forecast.summary_date}} | "Location": {{forecast._}}
-    <br /> "Day of Week" : {{forecast.day_of_week}}
-    <br /> "High Temperature": {{forecast.high}}
-    <br /> "Low Temperature": {{forecast.low}}
-    <br /> "Wind Speed": {{forecast.wnd_spd}}
-    <br /> "Wind Direction" : {{dailySummary.wnd_dir[0]}}
-    <br /> "Percentage of Precipitation (POP)" : {{forecast.pop}}
-    <br /> "Image of the wx code": {{forecast.wx}}
-    <br /> "wx code": {{forecast.wx_code}}
+<div class="forecast-zone">
+
+  <div class="forecast-zone forecast">
+
+    <div class="forecast-zone">
+        <forecast-current day="currentDay"></forecast-current>
+    </div>
+
+    <div class="forecast-zone">
+        <forecast-daily days="days"></forecast-daily>
+    </div>
+
   </div>
--->
-
-  <div class="jumbotron">
-
-    {{forecastInfo}}
-
-    {{dailySummary}}
-  </div>
-</div>
