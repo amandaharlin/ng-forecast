@@ -1,25 +1,13 @@
-<div>
+<div class="col-xs-12">
 
+  <div class="forecast">
 
+    <div class="col-xs-12">
+        <forecast-current day="currentDay"></forecast-current>
+    </div>
 
-  <div class="jumbotron">
-    <br/> <span>"Date": {{dailySummary.summary_date[0]}}</span>
+    <div class="col-xs-12">
+        <forecast-daily days="days"></forecast-daily>
+    </div>
 
-    <br/> <span>"Location": {{location.city}}</span>
-
-    <br/> <span>"Day of Week" : {{dailySummary.day_of_week[0]}}</span>
-    <br/> <span>"High Temperature": {{dailySummary.high[0]}}</span>
-    <br/> <span>"Low Temperature": {{dailySummary.low[0]}}</span>
-    <br/> <span>"Wind Speed": {{dailySummary.wnd_spd[0]}}</span>
-    <br/>
-    <br/>
-    <hr/>
-    <br/>
-    <br/> <span>"Wind Direction" : {{dailySummary.wnd_dir[0]}}</span>
-    <br/> <span>"Percentage of Precipitation (POP)" : {{dailySummary.pop[0]}}</span>
-    <br/> <span>icon <img ng-src="{{wxIcon}}"> summary {{dailySummary.wx[0]}}</span>
-    <br/> <span>"wx code": {{dailySummary.wx_code[0]}}</span>
-
-    <br/>
   </div>
-</div>
