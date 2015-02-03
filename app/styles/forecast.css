@@ -8,7 +8,7 @@ body {
 }
 
 .forecast {
-  height: 100px;
+  min-height: 100px;
 }
 
 .forecast-zone {
@@ -17,19 +17,29 @@ body {
   float: left;
 }
 
+
 .forecast-zone-label {
-  height: 34ps;
-  line-height: 34px;
+  line-height: 16px;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 12px;
+  color: #999;
+}
+
+.forecast-day-title {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1em;
 }
 
 .forecast-current {
-  height: 150px
+  min-height: 150px
 }
 
 .forecast-current-title {
   text-align: center;
+}
+
+.forecast-current-dateInfo {
+  font-size:2rem;
 }
 
 .forecast-current-hightemp {}
@@ -47,7 +57,6 @@ body {
 }
 
 .forecast-day {
-  border-left: 1px solid #ccc;
 }
 
 .forecast-day-title {
@@ -67,5 +76,15 @@ body {
 .forecast-day-temp-lowtemp {}
 
 .forecast-day {
-  height: 150px
+  min-height: 150px;
+  padding: 1.3em;
+}
+
+.temp-display {
+  font-size: 4em;
+  font-weight: 100;
+}
+
+.temp-display-slash {
+  color: #ccc;
 }

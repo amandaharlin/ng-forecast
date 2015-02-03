@@ -2,6 +2,14 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+
+  font-variant-numeric: lining-nums;
+  -moz-font-feature-settings:"lnum" 1;
+  -moz-font-feature-settings:"lnum=1";
+  -ms-font-feature-settings:"lnum" 1;
+  -o-font-feature-settings:"lnum" 1;
+  -webkit-font-feature-settings:"lnum" 1;
+  font-feature-settings:"lnum" 1;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -76,4 +84,19 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.muted {
+  color: #ccc;
+}
+
+.top-padding {
+  padding-top: 2rem;
+}
+.bottom-padding {
+  padding-bottom: 2rem;
+}
+
+.low-res-icon {
+  max-width: 100px;  
 }

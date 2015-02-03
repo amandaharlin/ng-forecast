@@ -1,18 +1,14 @@
 <div class="forecast-zone forecast-day" style="width:{{width}}%">
-  <div class="row">
-    <div class="col-xs-12 forecast-day-title">
-       <label class="forecast-zone-label"> {{day.weekDay}}</label>
-    </div>
-    <div class="col-xs-12">
-      <img class="forecast-day-icon" ng-src="{{day.icon}}">
-    </div>
-    <div class="col-xs-12 forecast-day-temp">
-      <div class="col-xs-6 forecast-day-temp-hightemp">
-       <label class="forecast-zone-label"> {{day.highTemp}}*</label>
-      </div>
-      <div class="col-xs-6 forecast-day-temp-lowetemp">
-        <label class="forecast-zone-label"> {{day.lowTemp}}*</label>
-      </div>
+  <div class="forecast-day-title">
+     <label class="forecast-zone-label"> {{day.weekDay}}</label>
+  </div>
+    <img class="forecast-day-icon" ng-src="{{day.icon}}">
+  <div class=" forecast-day-temp">
+    <div class="forecast-day-temp-hightemp pull-left">
+     <label class="forecast-zone-label"> {{day.highTemp}}&deg;</label>
+   </div>
+    <div class="forecast-day-temp-lowetemp pull-right">
+      <label class="forecast-zone-label"> {{day.lowTemp}}&deg;</label>
     </div>
   </div>
 </div>

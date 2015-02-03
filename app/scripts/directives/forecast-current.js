@@ -13,7 +13,8 @@ angular.module('forecastApp')
       restrict: 'E',
       replace: true,
       scope: {
-        day: '='
+        day: '=',
+        city: '='
       }
     };
   });
