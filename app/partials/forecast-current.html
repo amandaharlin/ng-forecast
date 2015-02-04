@@ -10,13 +10,12 @@
         {{day.weekDay}}, {{day.date}}
       </div>
     </div>
-
     <div class="col-xs-12 top-padding bottom-padding">
       <div class="col-xs-8">
         <img class="low-res-icon" ng-src="{{day.icon}}">
-        <span class="temp-display">{{day.highTemp}}&deg;</span>
-        <span class="temp-display temp-display-slash">/</span>
-        <span class="temp-display">{{day.lowTemp}}&deg;</span>
+        <span class="forecast-current-tempInfo forecast-current-hightemp">{{day.highTemp}}&deg;</span>
+        <span class="forecast-current-tempInfo forecast-current-slash">/</span>
+        <span class="forecast-current-tempInfo forecast-current-lowtemp">{{day.lowTemp}}&deg;</span>
       </div>
 
       <div class="col-xs-4  top-padding bottom-padding muted">

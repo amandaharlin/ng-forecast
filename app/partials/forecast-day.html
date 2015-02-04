@@ -1,14 +1,17 @@
-<div class="forecast-zone forecast-day" style="width:{{width}}%">
+<div ng-click="selectDay(day)"
+  class="forecast-zone forecast-day"
+  ng-class="{ 'forecast-day-active': active}"
+  style="width:{{width}}%">
   <div class="forecast-day-title">
-     <label class="forecast-zone-label"> {{day.weekDay}}</label>
+     <label class="forecast-zone-label">{{day.weekDay}}</label>
   </div>
     <img class="forecast-day-icon" ng-src="{{day.icon}}">
   <div class=" forecast-day-temp">
     <div class="forecast-day-temp-hightemp pull-left">
-     <label class="forecast-zone-label"> {{day.highTemp}}&deg;</label>
+     <label class="forecast-zone-label">{{day.highTemp}}&deg;</label>
    </div>
     <div class="forecast-day-temp-lowetemp pull-right">
-      <label class="forecast-zone-label"> {{day.lowTemp}}&deg;</label>
+      <label class="forecast-zone-label">{{day.lowTemp}}&deg;</label>
     </div>
   </div>
 </div>

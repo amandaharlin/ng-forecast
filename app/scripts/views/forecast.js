@@ -13,7 +13,7 @@ ForecastApp
     }
 
     var forecastView = {
-      url: '/forecast?location',
+      url: '/forecast?location&selectedday',
       templateUrl: './views/forecast.html',
       controller: 'forecastViewCtrl',
       resolve: {
@@ -26,8 +26,10 @@ ForecastApp
   });
 
 ForecastApp
-  .controller('forecastViewCtrl', function forecastViewCtrl($scope, forecast) {
+  .controller('forecastViewCtrl', function forecastViewCtrl($scope, forecast, $stateParams) {
     var wx = forecast.forecast || {};
+
+    console.log('$stateParams', $stateParams)
 
     function toDay(day, index){
       return {
@@ -49,7 +51,9 @@ ForecastApp
       numberOfDaysInWeekForecast = (wx.daily_summary.length - 1);
     }
 
-    var currentDay = toDay(wx.daily_summary[$scope.selectedIndex || 0]);
+    var selectedIndex = $stateParams.selectedday || 0;
+
+    var currentDay = toDay(wx.daily_summary[selectedIndex]);
     var week = wx.daily_summary.slice(0, numberOfDaysInWeekForecast + 1);
 
 
@@ -122,4 +126,6 @@ ForecastApp
     $scope.currentCity = currentCity;
     $scope.currentDay = currentDay;
     $scope.days = days;
+
+
   });

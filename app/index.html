@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="styles/meteocons/meteocons.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/forecast.css">
+    <!-- add in different css for time of day
+    <link rel="stylesheet" ng-href="layout-{{ layout }}.css">-->
+
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
   </head>
@@ -27,7 +30,7 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li ui-class="active"><a ng-href="#">Home</a></li>
+        <li ui-class="active"><a ng-href="#/">Home</a></li>
 
           <li ui-class="active"><a ui-sref="weatherforecaster">weatherforecaster</a></li>
 
@@ -37,7 +40,7 @@
 
       <div ui-view></div>
 
-     
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

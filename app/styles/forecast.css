@@ -22,7 +22,16 @@ body {
   line-height: 16px;
   font-weight: normal;
   font-size: 12px;
-  color: #999;
+  color: #ccc;
+}
+
+.forecast-card {
+  border: 1px solid #ccc;
+  padding: 3.8em 3.9em 0.8em;
+  border-radius: 3px;
+  margin-top: 2em;
+  background: white;
+  box-shadow: 0 0.2em 5px rgba(0,0,0,0.06);
 }
 
 .forecast-day-title {
@@ -38,11 +47,30 @@ body {
   text-align: center;
 }
 
-.forecast-current-dateInfo {
-  font-size:2rem;
+.forecast-current-locationInfo {
+  font-weight: 300;
+  font-size: 2.5em;
 }
 
-.forecast-current-hightemp {}
+.forecast-current-dateInfo {
+  font-weight: 300;
+  font-size: 1.3em;
+  color: #ccc;
+}
+
+.forecast-current-tempInfo {
+  font-size: 4.6em;
+  font-weight: 100;
+}
+
+.forecast-current-hightemp {
+
+}
+
+.forecast-current-slash {
+  color: #ccc;
+  /*color: #efefef;*/
+}
 
 .forecast-current-lowtemp {}
 
@@ -52,39 +80,44 @@ body {
 
 .forecast-daily {}
 
-.forecast-daily .forecast-day:first-child {
-  border-left: none;
-}
 
 .forecast-day {
+  min-height: 120px;
+  padding: 5px;
+  border: 1px solid transparent;
 }
+
+.forecast-day:hover {
+  border: 1px solid #ddd;
+  cursor: pointer;
+  }
+
 
 .forecast-day-title {
   text-align: center;
 }
 
+.forecast-day-active {
+  border: 1px solid #fb7202;
+  }
+
+.forecast-day-active .forecast-day-title > .forecast-zone-label{
+  color: #fb7202;
+}
+
+  .forecast-day-active:hover {
+    border: 1px solid #fb7202;
+  }
+
 .forecast-day-icon {
   width: 100%;
+}
+.low-res-icon {
+  max-width: 100px;
+  margin-left: -1.1em;
+  margin-top: -1.7em;
 }
 
 .forecast-day-temp {
   text-align: center;
-}
-
-.forecast-day-temp-hightemp {}
-
-.forecast-day-temp-lowtemp {}
-
-.forecast-day {
-  min-height: 150px;
-  padding: 1.3em;
-}
-
-.temp-display {
-  font-size: 4em;
-  font-weight: 100;
-}
-
-.temp-display-slash {
-  color: #ccc;
 }
